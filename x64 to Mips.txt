@@ -1,0 +1,14 @@
+# (NE) stands for [Not the equivalent]
+#(1 Byte only) and (2 Byte only) is just a prefix that enables me to understand 
+#that the instruction only sends the value to a specific part of the register.
+
+
+
+
+add dword ptr zero, 0x1 = addi zero,zero,0x0001
+sub dword ptr zero, 0x1 = addi zero,zero,0xFFFF
+mov dword ptr v0, 0x0 (1 Byte only) = addiu v0,zero,0x0000
+mov dword ptr v0, 0x1000 (2 Byte only) = lui v0,0x1000
+Jump = j 0x0
+Jne (NE) = bne zero,zero,0x0
+Je (NE) = beq zero,zero,0x0
